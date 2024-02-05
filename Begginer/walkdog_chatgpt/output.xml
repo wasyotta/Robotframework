@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-04T23:55:46.381263" rpa="false" schemaversion="5">
+<suite id="s1" name="Cadastro" source="C:\Cursos_e_Mentorias\Automação\QAx\robotframework\repositórios\Robotframework\Begginer\walkdog_chatgpt\cadastro.robot">
+<test id="s1-t1" name="Register a Dog Walker successfully" line="11">
+<kw name="Start session" owner="base" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:46.537263" level="INFO">Opening browser 'Chrome' to base url 'https://walkdog.vercel.app/signup'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-04T23:55:46.537263" elapsed="3.235999"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-02-04T23:55:49.773262" elapsed="0.119999"/>
+</kw>
+<status status="PASS" start="2024-02-04T23:55:46.536264" elapsed="3.356997"/>
+</kw>
+<kw name="Fill out dog walker form" owner="SignupPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:49.894262" level="INFO">Typing text 'Wilson Alves Silva' into text field 'css=input[name="name"]'.</msg>
+<arg>css=input[name="name"]</arg>
+<arg>${FullName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T23:55:49.894262" elapsed="0.075001"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:49.970261" level="INFO">Typing text 'testeqa@teste.com' into text field 'css=input[name="email"]'.</msg>
+<arg>css=input[name="email"]</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T23:55:49.969263" elapsed="0.054998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:50.025261" level="INFO">Typing text '00000041414' into text field 'css=input[name="cpf"]'.</msg>
+<arg>css=input[name="cpf"]</arg>
+<arg>${Cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.024261" elapsed="0.048634"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:50.072895" level="INFO">Typing text '06505070' into text field 'css=input[name="cep"]'.</msg>
+<arg>css=input[name="cep"]</arg>
+<arg>${Zipcode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.072895" elapsed="0.046999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:50.119894" level="INFO">Typing text '447' into text field 'css=input[name="addressNumber"]'.</msg>
+<arg>css=input[name="addressNumber"]</arg>
+<arg>${AddressNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.119894" elapsed="0.042999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:50.162893" level="INFO">Typing text 'B' into text field 'css=input[name="addressDetails"]'.</msg>
+<arg>css=input[name="addressDetails"]</arg>
+<arg>${AddressDetails}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.162893" elapsed="0.040593"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:50.203486" level="INFO">Sending C:\Cursos_e_Mentorias\Automação\QAx\robotframework\repositórios\Robotframework\Begginer\walkdog_chatgpt\fixtures\cnhfake.png to browser.</msg>
+<arg>css=input[type="file"]</arg>
+<arg>${EXECDIR}/fixtures/${Document}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.203486" elapsed="0.018999"/>
+</kw>
+<arg>Wilson Alves Silva</arg>
+<arg>testeqa@teste.com</arg>
+<arg>00000041414</arg>
+<arg>06505070</arg>
+<arg>447</arg>
+<arg>B</arg>
+<arg>cnhfake.png</arg>
+<status status="PASS" start="2024-02-04T23:55:49.894262" elapsed="0.329223"/>
+</kw>
+<kw name="Submit form" owner="SignupPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), "Cadastrar")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.223485" elapsed="0.017001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:50.240486" level="INFO">Clicking element 'xpath=//button[contains(text(), "Cadastrar")]'.</msg>
+<arg>xpath=//button[contains(text(), "Cadastrar")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.240486" elapsed="0.080999"/>
+</kw>
+<status status="PASS" start="2024-02-04T23:55:50.223485" elapsed="0.098000"/>
+</kw>
+<kw name="Popup should have text" owner="SignupPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-04T23:55:50.321485" level="INFO">${element} = xpath=//div[contains(@class, "swal2-html-container")]</msg>
+<var>${element}</var>
+<arg>xpath=//div[contains(@class, "swal2-html-container")]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.321485" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, "swal2-html-container")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.322487" elapsed="0.626497"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:50.957984" level="INFO">Element 'xpath=//div[contains(@class, "swal2-html-container")]' is displayed.</msg>
+<arg>${element}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.948984" elapsed="0.009000"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:50.968985" level="INFO">Element 'xpath=//div[contains(@class, "swal2-html-container")]' contains text 'Recebemos o seu cadastro e em breve retornaremos o contato.'.</msg>
+<arg>${element}</arg>
+<arg>${expected_text}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.957984" elapsed="0.012001"/>
+</kw>
+<arg>Recebemos o seu cadastro e em breve retornaremos o contato.</arg>
+<status status="PASS" start="2024-02-04T23:55:50.321485" elapsed="0.648500"/>
+</kw>
+<kw name="Finish session" owner="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-02-04T23:55:51.132984" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-02-04T23:55:50.969985" elapsed="0.163999"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-04T23:55:51.133984" elapsed="2.107278"/>
+</kw>
+<status status="PASS" start="2024-02-04T23:55:50.969985" elapsed="2.271277"/>
+</kw>
+<status status="PASS" start="2024-02-04T23:55:46.536264" elapsed="6.704998"/>
+</test>
+<status status="PASS" start="2024-02-04T23:55:46.382264" elapsed="6.859998"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

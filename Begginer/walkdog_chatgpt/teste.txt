@@ -1,0 +1,19 @@
+Submeter o formulário de cadastro
+    Wait Until Element Is Visible    xpath=//button[contains(text(), "Cadastrar")]    ${DELAY}
+    Click Button                     xpath=//button[contains(text(), "Cadastrar")]
+
+Verificar cadastro realizado com sucesso
+    Wait Until Element Is Visible    xpath=//div[contains(@class, "swal2-html-container")]    ${DELAY}
+    
+    
+    
+    
+    Page Should Contain              Recebemos o seu cadastro e em breve retornaremos o contato.
+   
+
+
+   Alert have text
+    [Arguments]        ${expected_text}        
+    ${element}    Set Variable        xpath=//div[contains(@class, "swal2-html-container")] 
+    Element Should Be Visible         ${element}
+    Page Should Contain               ${element}        ${expected_text} 

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-04T18:13:02.115851" rpa="false" schemaversion="5">
+<suite id="s1" name="Cadastro" source="C:\Cursos_e_Mentorias\Automação\QAx\robotframework\repositórios\Robotframework\Begginer\walkdog_chatgpt\cadastro.robot">
+<test id="s1-t1" name="Cadastrar um Dog Walker com sucesso" line="45">
+<kw name="Abrir o navegador na página de cadastro">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:02.265851" level="INFO">Opening browser 'Chrome' to base url 'https://walkdog.vercel.app/signup'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-04T18:13:02.265851" elapsed="3.168043"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-04T18:13:05.433894" elapsed="0.107999"/>
+</kw>
+<status status="PASS" start="2024-02-04T18:13:02.264851" elapsed="3.277042"/>
+</kw>
+<kw name="Preencher o formulário de cadastro">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input[placeholder="Nome completo"]</arg>
+<arg>${DELAY}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-04T18:13:05.541893" elapsed="0.015000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:05.556893" level="INFO">Typing text 'Wilson Alves Silva' into text field 'css=input[name="name"]'.</msg>
+<arg>css=input[name="name"]</arg>
+<arg>${FullName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T18:13:05.556893" elapsed="0.075001"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:05.632894" level="INFO">Typing text 'testeqa@teste.com' into text field 'css=input[name="email"]'.</msg>
+<arg>css=input[name="email"]</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T18:13:05.631894" elapsed="0.054000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:05.686893" level="INFO">Typing text '00000041414' into text field 'css=input[name="cpf"]'.</msg>
+<arg>css=input[name="cpf"]</arg>
+<arg>${Cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T18:13:05.685894" elapsed="0.048999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:05.735893" level="INFO">Typing text '06505070' into text field 'css=input[name="cep"]'.</msg>
+<arg>css=input[name="cep"]</arg>
+<arg>${Zipcode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T18:13:05.734893" elapsed="0.047000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-04T18:13:09.782545" level="INFO">Slept 4 seconds.</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-04T18:13:05.781893" elapsed="4.000652"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:09.782545" level="INFO">Typing text '447' into text field 'css=input[name="addressNumber"]'.</msg>
+<arg>css=input[name="addressNumber"]</arg>
+<arg>${AddressNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T18:13:09.782545" elapsed="0.042518"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:09.825063" level="INFO">Typing text 'B' into text field 'css=input[name="addressDetails"]'.</msg>
+<arg>css=input[name="addressDetails"]</arg>
+<arg>${AddressDetails}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T18:13:09.825063" elapsed="0.040997"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:09.866060" level="INFO">Sending C:\Cursos_e_Mentorias\Automação\QAx\robotframework\repositórios\Robotframework\Begginer\walkdog_chatgpt\cnhfake.png to browser.</msg>
+<arg>css=input[type="file"]</arg>
+<arg>${Document}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-02-04T18:13:09.866060" elapsed="0.020001"/>
+</kw>
+<status status="PASS" start="2024-02-04T18:13:05.541893" elapsed="4.344168"/>
+</kw>
+<kw name="Submeter o formulário de cadastro">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), "Cadastrar")]</arg>
+<arg>${DELAY}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-04T18:13:09.886061" elapsed="0.013999"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:09.901061" level="INFO">Clicking button 'xpath=//button[contains(text(), "Cadastrar")]'.</msg>
+<arg>xpath=//button[contains(text(), "Cadastrar")]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-04T18:13:09.900060" elapsed="0.038001"/>
+</kw>
+<status status="PASS" start="2024-02-04T18:13:09.886061" elapsed="0.052000"/>
+</kw>
+<kw name="Verificar cadastro realizado com sucesso">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, "swal2-html-container")]</arg>
+<arg>${DELAY}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-04T18:13:09.939060" elapsed="0.626002"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:10.574314" level="INFO">Current page contains text 'Recebemos o seu cadastro e em breve retornaremos o contato.'.</msg>
+<arg>Recebemos o seu cadastro e em breve retornaremos o contato.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-02-04T18:13:10.565062" elapsed="0.009252"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-02-04T18:13:10.745202" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-02-04T18:13:10.575309" elapsed="0.169893"/>
+</kw>
+<status status="PASS" start="2024-02-04T18:13:09.939060" elapsed="0.806142"/>
+</kw>
+<tag>cadastro</tag>
+<status status="PASS" start="2024-02-04T18:13:02.264851" elapsed="8.480351"/>
+</test>
+<doc>Testes de cadastro para Dog Walkers.</doc>
+<status status="PASS" start="2024-02-04T18:13:02.116851" elapsed="8.629351"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">cadastro</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
